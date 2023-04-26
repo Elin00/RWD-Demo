@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        /* 1 */
+        .box1 {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            background-color: #f5cac3;
+            transition: background-color 0.5s ease-in;
+            border: 6px solid #720026;
+            margin-bottom: 50px;
+        }
+
+        .box1:hover {
+            background-color: peachpuff;
+        }
+
+        .box1-line1,
+        .box1-line2 {
+            width: 170px;
+            height: 10px;
+            margin: 5px;
+            background-color: #ce4257;
+            transition: transform 0.5s ease-in, background-color 0.5s ease-in;
+        }
+
+        .box1:hover .box1-line1 {
+            transform: translateY(100%) rotate(45deg);
+            background-color: #542028;
+        }
+
+        .box1:hover .box1-line2 {
+            transform: translateY(-100%) rotate(-45deg);
+            background-color: #542028;
+        }
+
+        /* 2 */
+        .box2 {
+            width: 300px;
+            height: 300px;
+            background-color: #eaac8b;
+            border: 6px solid darkblue;
+            overflow: hidden;
+            transition: background-color 500ms ease-in;
+            margin-bottom: 50px;
+        }
+
+        .box2:hover {
+            background-color: #355070;
+        }
+
+        .circle {
+            width: 300px;
+            height: 300px;
+            background-color: #e56b6f;
+            transition: border-radius 500ms ease-in, transform 500ms ease-in;
+        }
+
+        .box2:hover .circle {
+            border-radius: 50%;
+            transform: rotate(-60deg) scale(0.6);
+        }
+
+        /* 3 */
+        .box3 {
+            width: 300px;
+            height: 300px;
+            background-color: #eaf2d7;
+            border: 6px solid darkgreen;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .box3-line1 {
+            width: 10px;
+            height: 300px;
+            background-color: #eaf2d7;
+            transition: width 0.5s ease-in, height 0.5s ease-in, background-color 0.5s ease-in;
+        }
+
+        .box3:hover .box3-line1 {
+            width: 120px;
+            height: 300px;
+            background-color: #e27396;
+        }
+
+        .box3-line2 {
+            width: 30px;
+            height: 300px;
+            background-color: #77bfa3;
+            transition: width 1s ease-in, height 1s ease-in, background-color 1s ease-in;
+        }
+
+        .box3:hover .box3-line2 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #ffc971;
+        }
+
+        .box3-line3 {
+            width: 30px;
+            height: 300px;
+            background-color: #77bfa3;
+            transition: width 0.5s ease-in, height 0.5s ease-in, background-color 0.5s ease-in;
+        }
+
+        .box3:hover .box3-line3 {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #cfbaf0;
+        }
+
+        /* 4 */
+        .box4 {
+            width: 300px;
+            height: 300px;
+            background-color: #bb9bb0;
+            border: 6px solid #1c1d21;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+
+        .box4_line {
+            width: 30px;
+            height: 300px;
+            background-color: #f1e3e4;
+            transition: transform 2.5s ease-in;
+        }
+
+        .box4_circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #f1e3e4;
+        }
+
+        .box4_circle1 {
+            transition: transform 1.3s ease-out 1s, opacity 1.3s ease-out 1.4s;
+        }
+
+        .box4_circle2 {
+            transition: transform 1.3s ease-out 1.7s, opacity 1.3s ease-out 2.1s;
+        }
+
+        .box4_circle3 {
+            transition: transform 1.3s ease-out 2.2s, opacity 1.3s ease-out 2.7s;
+        }
+
+        .box4:hover .box4_line {
+            transform: translateX(300px);
+        }
+
+        .box4:hover .box4_circle1 {
+            transform: translate(150px, 70px);
+            opacity: 0;
+        }
+
+        .box4:hover .box4_circle2 {
+            transform: translate(140px, -70px);
+            opacity: 0;
+        }
+
+        .box4:hover .box4_circle3 {
+            transform: translate(110px, 50px);
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box1-line box1-line1"></div>
+        <div class="box1-line box1-line2"></div>
+    </div>
+    <div class="box2">
+        <div class="circle"></div>
+    </div>
+    <div class="box3">
+        <div class="box3-line1"></div>
+        <div class="box3-line2"></div>
+        <div class="box3-line3"></div>
+    </div>
+    <div class="box box4">
+        <div class="box4_line"></div>
+        <div class="box4_circle box4_circle1"></div>
+        <div class="box4_circle box4_circle2"></div>
+        <div class="box4_circle box4_circle3"></div>
+    </div>
+</body>
+
+</html>
