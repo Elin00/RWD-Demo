@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        @keyframes loadingspan {
+            0% {
+                filter: blur(0px);
+            }
+
+            100% {
+                filter: blur(2px);
+            }
+        }
+
+        @keyframes span-color {
+            0% {
+                color: #f7d1cd;
+            }
+
+            100% {
+                color: #7b1e7a;
+            }
+        }
+
+        @keyframes circlemove {
+            0% {
+                top: 50px;
+                left: 50px;
+            }
+
+            25% {
+                top: 100px;
+                left: 300px;
+            }
+
+            50% {
+                top: 30px;
+                left: 500px;
+            }
+
+            75% {
+                top: 120px;
+                left: 600px;
+            }
+
+            100% {
+                top: 100px;
+                left: 900px;
+            }
+        }
+
+        .box3 {
+            width: 1000px;
+            height: 250px;
+            background-color: #81a4cd;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .circle {
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            animation: circlemove 3s infinite linear alternate;
+        }
+
+        .circle1 {
+            width: 100px;
+            height: 100px;
+        }
+
+        .circle2 {
+            width: 60px;
+            height: 60px;
+            opacity: 0.7;
+            animation-delay: 0.1s;
+        }
+
+        .circle3 {
+            width: 50px;
+            height: 50px;
+            opacity: 0.5;
+            animation-delay: 0.2s;
+        }
+
+        .circle4 {
+            width: 40px;
+            height: 40px;
+            opacity: 0.3;
+            animation-delay: 0.3s;
+        }
+
+        .circle5 {
+            width: 30px;
+            height: 30px;
+            opacity: 0.2;
+            animation-delay: 0.4s;
+        }
+
+        .circle6 {
+            width: 20px;
+            height: 20px;
+            opacity: 0.1;
+            animation-delay: 0.5s;
+        }
+
+        .box1 span {
+            color: #ce4257;
+            font-weight: bold;
+            font-size: 40px;
+            animation-name: loadingspan;
+            animation-duration: 2.2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+
+        .box2 span {
+            color: #d1b3c4;
+            font-weight: bold;
+            font-size: 40px;
+            animation: span-color 2.2s linear infinite;
+        }
+
+
+
+        .box2 .span2 {
+            animation-delay: 0.2s;
+        }
+
+        .box2 .span3 {
+            animation-delay: 0.4s;
+        }
+
+        .box2 .span4 {
+            animation-delay: 0.6s;
+        }
+
+        .box2 .span5 {
+            animation-delay: 0.8s;
+        }
+
+        .box2 .span6 {
+            animation-delay: 1s;
+        }
+
+        .box2 .span7 {
+            animation-delay: 1.2s;
+        }
+
+        .box2 .span8 {
+            animation-delay: 1.4s;
+        }
+
+        .box2 .span9 {
+            animation-delay: 1.6s;
+        }
+
+        .box2 .span3 {
+            animation-delay: 0.4s;
+        }
+
+        .box2 .span4 {
+            animation-delay: 0.6s;
+        }
+
+        .box2 .span5 {
+            animation-delay: 0.8s;
+        }
+
+        .box2 .span6 {
+            animation-delay: 1s;
+        }
+
+        .box2 .span7 {
+            animation-delay: 1.2s;
+        }
+
+        .box2 .span8 {
+            animation-delay: 1.4s;
+        }
+
+        .box2 .span9 {
+            animation-delay: 1.6s;
+        }
+
+        .box2 .span10 {
+            animation-delay: 1.8s;
+        }
+
+        .box2 .span11 {
+            animation-delay: 2s;
+        }
+
+        /* circle */
+    </style>
+</head>
+
+<body>
+    <div class="box1" style="margin-bottom: 50px;">
+        <span class="span1">H</span>
+        <span class="span2">e</span>
+        <span class="span3">l</span>
+        <span class="span4">l</span>
+        <span class="span5">o</span>
+        <span class="span6">W</span>
+        <span class="span7">o</span>
+        <span class="span8">r</span>
+        <span class="span9">l</span>
+        <span class="span10">d</span>
+        <span class="span11">!</span>
+    </div>
+    <div class="box2">
+        <span class="span1">H</span>
+        <span class="span2">e</span>
+        <span class="span3">l</span>
+        <span class="span4">l</span>
+        <span class="span5">o</span>
+        <span class="span6">W</span>
+        <span class="span7">o</span>
+        <span class="span8">r</span>
+        <span class="span9">l</span>
+        <span class="span10">d</span>
+        <span class="span11">!</span>
+    </div>
+    <div class="box3">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+        <div class="circle circle5"></div>
+        <div class="circle circle6"></div>
+    </div>
+</body>
+
+</html>
