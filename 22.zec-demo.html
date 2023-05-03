@@ -14,6 +14,17 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        .product .col {
+            opacity: 0;
+            transition: 2s;
+            transform: translateY(100px);
+        }
+
+        .product h2 {
+            transition: 1s;
+            transform: translateX(-300px);
+        }
+
         @media screen and (min-width:768px) {
             .border-top-md-0 {
                 border-top: none !important;
@@ -599,15 +610,28 @@
 
                     </div>
                     <div>
-                        <p class="text-center text-gray-600 text-xs py-2">© 嘖室股份有限公司</p>
+                        <p class="text-center py-2">© 嘖室股份有限公司</p>
                     </div>
             </sention>
         </main>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-            crossorigin="anonymous"></script>
-        <script src="./js/jquery-3.6.3.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script>
+            $(window).scroll(() => {
+                console.log('', $(window).scrollTop());
+                if ($(window).scrollTop() > 500) {
+                    $('.product .col').css('opacity', 1).css('transform', 'translateY(0px)')
+
+                    $('.product h2').css('transform', 'translateX(0px)')
+                }
+                else {
+                    $('.product .col').css('opacity', 0).css('transform', 'translateY(100px)')
+                    $('.product h2').css('transform', 'translateX(-300px)')
+
+                }
+            })
+        </script>
 
 </body>
 
